@@ -1,0 +1,91 @@
+.footer {
+    padding: $p-10 * 10;
+    .footer__wrapper {
+        font-size: $body-2;
+        .wrapper__menu {
+            display: flex;
+            margin-bottom: $m-10 * 5;
+            .menu__left {
+                width: $w-100 - 50;
+                p {
+                    font-weight: $semiBold;
+                }
+                ul {
+                    li {
+                        font-weight: $semiLight;
+                    }
+                }
+                @include respond(phone) {
+                    width: $w-100;
+                }
+            }
+            .menu__right {
+                width: $w-100 - 50;
+                display: flex;
+                justify-content: space-between;
+                .right__item {
+                    p {
+                        font-weight: $semiBold;
+                    }
+                    ul {
+                        li {
+                            font-weight: $semiLight;
+                        }
+                    }
+                    @include respond(tablet) {
+                        width: $w-100 / 2;
+                    }
+                }
+                @include respond(laptop) {
+                    width: $w-100 - 30;
+                }
+                @include respond(tablet) {
+                    flex-wrap: wrap;
+                }
+                @include respond(phone) {
+                    width: $w-100;
+                    flex-wrap: wrap;
+                }
+            }
+            @include respond(phone) {
+                flex-direction: column;
+            }
+        }
+        .wrapper__info {
+            display: flex;
+            justify-content: space-between;
+            .info__content {
+                width: $w-100 - 50;
+                font-family: "Noto Sans KR", sans-serif;
+                font-weight: $semiLight;
+                color: $tGrey-2;
+                @include respond(phone) {
+                    width: $w-100;
+                }
+            }
+            .info__logo {
+                width: $w-100 - 50;
+                display: flex;
+                justify-content: flex-end;
+                img {
+                    width: $w-10 * 2.3;
+                    height: $h-10 * 2.3;
+                    margin: 0 $m-10;
+                }
+                @include respond(phone) {
+                    width: $w-100;
+                    justify-content: center;
+                }
+            }
+            @include respond(phone) {
+                flex-direction: column;
+            }
+        }
+    }
+    @include respond(laptop) {
+        padding: $p-10 * 5 $p-10 * 2;
+    }
+    @include respond(phone) {
+        padding: $p-10 * 5 $p-10;
+    }
+}

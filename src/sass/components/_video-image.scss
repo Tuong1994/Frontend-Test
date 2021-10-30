@@ -1,0 +1,150 @@
+.video-image {
+    margin-bottom: $m-10 * 15;
+    padding: $p-10 * 15;
+    position: relative;
+    .video-image__wrapper {
+        .wrapper__content {
+            text-align: center;
+            .content__title {
+                font-size: $h2;
+                font-weight: $extraBold;
+                line-height: $h-10 * 6;
+                @include respond(tablet) {
+                    font-size: $h4;
+                    line-height: $h-10 * 3;
+                }
+            }
+            .content__text {
+                font-size: $h6;
+                font-weight: $regular;
+                line-height: $h-10 * 3.2;
+                padding: 0 $p-10 * 17;
+                @include respond(laptop) {
+                    padding: 0 $p-10 * 10;
+                }
+                @include respond(tablet) {
+                    padding: 0 $p-10 * 2;
+                }
+            }
+            .content__button {
+                width: $w-100;
+                display: flex;
+                justify-content: center;
+                margin-bottom: $m-10 * 5;
+                .button {
+                    margin: $m-10 * 5 0;
+                    @include respond(laptop) {
+                        width: $w-100 - 50;
+                    }
+                    @include respond(phone) {
+                        width: $w-100;
+                    }
+                }
+            }
+        }
+        .wrapper__img {
+            @include respond(laptop) {
+                display: none;
+            }
+        }
+        .wrapper__img-h {
+            position: absolute;
+            top: 0;
+            left: 5%;
+            img {
+                width: auto;
+            }
+        }
+        .wrapper__img-w {
+            position: absolute;
+            top: 15%;
+            right: 5%;
+            .img-w {
+                position: relative;
+                img {
+                    width: auto;
+                    &:nth-child(2) {
+                        width: $w-10 * 13;
+                        height: $h-10 * 13;
+                        position: absolute;
+                        top: 55%;
+                        right: 80%;
+                    }
+                }
+            }
+        }
+        .wrapper__image {
+            .image {
+                @include respond(laptop) {
+                    display: none;
+                }
+            }
+            .image__left {
+                position: absolute;
+                top: 20%;
+                left: -25%;
+                z-index: -1;
+                img {
+                    width: auto;
+                }
+            }
+            .image__bottom {
+                position: absolute;
+                bottom: 0;
+                z-index: -1;
+                img {
+                    width: auto;
+                    &:nth-child(1) {
+                        position: absolute;
+                        top: -20%;
+                        left: -30%;
+                        z-index: -1;
+                    }
+                    &:nth-child(2) {
+                        transform: translateY(50%);
+                    }
+                }
+            }
+            .image__click {
+                position: absolute;
+                bottom: 4%;
+                right: 35%;
+                img {
+                    width: auto;
+                }
+            }
+            .image__right {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                z-index: -1;
+                .right__wrapper {
+                    position: relative;
+                    img {
+                        width: auto;
+                        &:nth-child(1) {
+                            transform: translateX(30%);
+                        }
+                        &:nth-child(2) {
+                            position: absolute;
+                            top: -50%;
+                            right: -50%;
+                            z-index: -1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include respond(extraTablet) {
+        margin: 0;
+    }
+    @include respond(extraTablet) {
+        padding: $p-10 * 10 $p-10 * 2;
+        margin: 0;
+    }
+    @include respond(phone) {
+        padding: $p-10 * 10 $p-10;
+        margin: 0;
+    }
+}

@@ -1,0 +1,82 @@
+.products {
+    padding: $p-10 * 10;
+    .products__wrapper {
+        .wrapper__list {
+            display: flex;
+            flex-wrap: wrap;
+            .list__card {
+                width: $w-100 / 5;
+                padding: 0 $p-10 - 5;
+                margin-bottom: $m-10 * 5;
+                border-bottom: 3px solid transparent;
+                transition: all 0.5s ease;
+                &:hover {
+                    border-color: $border--dark;
+                }
+                &:hover .card__img img {
+                    transform: scale(1.2, 1.2);
+                }
+                .card__img {
+                    width: $w-100;
+                    height: $h-10 * 20;
+                    overflow: hidden;
+                    img {
+                        object-fit: cover;
+                        transition: all 0.3s ease;
+                    }
+                    @include respond(extraTablet) {
+                        height: $h-10 * 15;
+                    }
+                }
+                .card__content {
+                    .content__title {
+                        font-size: $body-3;
+                        font-weight: $semiBold;
+                        color: $tDark-2;
+                        line-height: $h-10 * 3.5;
+                        margin: $m-10 * 2 0;
+                        @include respond(extraTablet) {
+                            line-height: initial;
+                        }
+                    }
+                    .content__info {
+                        display: flex;
+                        justify-content: space-between;
+                        .info__price {
+                            font-size: $body-3;
+                        }
+                        .info__likes {
+                            display: flex;
+                            font-size: $body-3;
+                            .likes__img {
+                                width: $w-10 * 2;
+                                height: $h-10 * 2;
+                                margin-right: $m-10;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .wrapper__button {
+            width: $w-100;
+            display: flex;
+            justify-content: center;
+            .button {
+                @include respond(extraTablet) {
+                    margin: $m-10 * 4 0;
+                    width: $w-100 - 70;
+                }
+            }
+        }
+        @include respond(tablet) {
+            display: none;
+        }
+    }
+    @include respond(laptop) {
+        padding: $p-10 * 4;
+    }
+    @include respond(tablet) {
+        padding: $p-10 * 10 $p-10;
+    }
+}

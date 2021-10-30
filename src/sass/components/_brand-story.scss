@@ -1,0 +1,149 @@
+.brand-story {
+    background: $blue;
+    padding: $p-10 * 10;
+    position: relative;
+    .brand-story__content {
+        text-align: center;
+        color: $tYellow;
+        padding: 0 $p-10 * 20;
+        margin-bottom: $m-10 * 8;
+        .content__title {
+            font-size: $h3;
+            font-weight: $bold;
+            line-height: $h-10 * 6;
+            letter-spacing: 4.5px;
+            @include respond(phone) {
+                font-size: $h4;
+            }
+        }
+        .content__text {
+            font-family: "Noto Sans KR", sans-serif;
+            font-weight: $light;
+            line-height: $h-10 * 3;
+        }
+        @include respond(laptop) {
+            padding: $p-10 * 5;
+        }
+        @include respond(tablet) {
+            padding: $p-10;
+        }
+    }
+    .brand-story__images {
+        .images__info {
+            display: flex;
+            border-top: 24px solid $border--dark-2;
+            position: relative;
+            z-index: 999;
+            .info__images {
+                width: $w-100 - 50;
+                img {
+                    @include respond(laptop) {
+                        object-fit: cover;
+                    }
+                }
+                @include respond(extraTablet) {
+                    width: $w-100;
+                }
+            }
+            .info__inner {
+                width: $w-100 - 50;
+                padding: $p-10 * 3;
+                background: $primary;
+                border-top: 3px solid $border--dark-2;
+                border-bottom: 3px solid $border--dark-2;
+                border-right: 3px solid $border--dark-2;
+                .inner__title {
+                    font-size: $h5;
+                    font-weight: $extraBold;
+                    line-height: $h-10 * 6;
+                    color: $tDark-2;
+                    @include respond(extraTablet) {
+                        line-height: $h-10 * 3;
+                    }
+                }
+                .inner__content {
+                    font-family: "Noto Sans KR", sans-serif;
+                    font-weight: $semiLight;
+                    line-height: $h-10 * 3;
+                    @include respond(extraTablet) {
+                        line-height: $h-10 * 2;
+                    }
+                }
+                .inner__button {
+                    width: $w-100 - 50;
+                    margin: $m-10 * 5 0;
+                    @include respond(phone) {
+                        width: $w-100;
+                    }
+                }
+                @include respond(extraTablet) {
+                    width: $w-100;
+                    border: 3px solid $border--dark-2;
+                }
+                @include respond(smallPhone) {
+                    padding: $p-10;
+                }
+            }
+            @include respond(extraTablet) {
+                border: 0;
+                flex-direction: column;
+            }
+        }
+        .images {
+            position: absolute;
+            img {
+                width: auto;
+                height: auto;
+            }
+            @include respond(laptop) {
+                display: none;
+            }
+        }
+        .images__one {
+            top: 50px;
+            right: 100px;
+            .one__wrapper {
+                position: relative;
+                .wrapper__img-2 {
+                    position: absolute;
+                    top: 30%;
+                    left: 50%;
+                }
+            }
+        }
+        .images__two {
+            right: 0;
+            bottom: 12%;
+            .two__wrapper {
+                position: relative;
+                .wrapper__img-1 {
+                    position: absolute;
+                    right: -5%;
+                    bottom: 0;
+                    z-index: 9;
+                }
+                .wrapper__img-2 {
+                    position: relative;
+                    transform: translate(50%, -20%);
+                }
+            }
+        }
+        .images__three {
+            bottom: 0;
+            left: 0;
+            .three__img {
+                transform: translate(20%, -100%);
+            }
+            .three__group {
+                transform: translateY(-35%);
+            }
+        }
+    }
+    @include respond(laptop) {
+        padding: $p-10 * 5 $p-10 * 2;
+    }
+
+    @include respond(tablet) {
+        padding: $p-10 * 5 $p-10;
+    }
+}

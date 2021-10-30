@@ -1,0 +1,41 @@
+.introduction {
+    width: $w-100;
+    background-image: url("../../assets/img/introduction/introduction-bg.png");
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-size: cover;
+    padding: $p-10 * 17;
+    color: $tPrimary;
+    .introduction__wrapper {
+        width: $w-100 - 40;
+        .wrapper__title {
+            font-size: $h2;
+            font-weight: $extraBold;
+            letter-spacing: 5px;
+            @include respond(phone) {
+                font-size: $h4;
+            }
+        }
+        .wrapper__content {
+            font-size: $h6;
+            font-weight: $regular;
+            line-height: $h-10 * 3.5;
+            @include respond(phone) {
+                font-size: $body-2;
+                line-height: $h-10 * 2.5;
+            }
+        }
+        @include respond(laptop) {
+            width: $w-100 - 20;
+        }
+        @include respond(phone) {
+            width: $w-100;
+        }
+    }
+    @include respond(extraTablet) {
+        padding: $p-10 * 5;
+    }
+    @include respond(phone) {
+        padding: $p-10 * 2;
+    }
+}

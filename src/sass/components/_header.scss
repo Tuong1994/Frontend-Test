@@ -1,0 +1,72 @@
+.header {
+    width: $w-100;
+    height: $h-10 * 8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $secondary;
+    padding: 0 $p-10 * 10;
+    .header__logo {
+        @include respond(laptop) {
+            width: $w-100 - 80;
+        }
+        @include respond(tablet) {
+            width: $w-100 - 60;
+        }
+    }
+    .header__nav {
+        display: flex;
+        justify-content: space-between;
+        .nav__link {
+            padding: 0 $p-10 * 3;
+            .link {
+                text-decoration: none;
+                color: $tPrimary;
+                font-size: $body-2;
+            }
+            @include respond(laptop) {
+                padding: 0 $p-10;
+            }
+        }
+        .nav__link--line {
+            border-right: 1px solid $primary;
+        }
+        @include respond(tablet) {
+            display: none;
+        }
+    }
+    .header__button {
+        width: $w-10 * 3;
+        height: $h-10 * 3;
+        padding: $p-10 - 5;
+        border: 1px solid $border--white;
+        cursor: pointer;
+        display: none;
+        .button__wrapper {
+            width: $w-100;
+            height: $h-100;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            .wrapper__line {
+                width: $w-100;
+                height: 2px;
+                background: $primary;
+            }
+        }
+        @include respond(tablet) {
+            display: block;
+        }
+    }
+    @include respond(laptop) {
+        padding: 0 $p-10;
+    }
+    @include respond(tablet) {
+        padding: 0 $p-10 * 3;
+    }
+    @include respond(phone) {
+        padding: 0 $p-10;
+        height: $h-10 * 5;
+    }
+}

@@ -1,0 +1,18 @@
+.button {
+    width: $w-100 - 85;
+    height: $h-10 * 6;
+    font-size: $h6;
+    font-weight: $extraBold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: $m-10 * 9 0;
+    border: solid 3px $border--dark;
+    background-color: $primary;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+        background: $dark;
+        color: $tPrimary;
+    }
+}

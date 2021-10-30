@@ -1,0 +1,177 @@
+.issue {
+    background: $yellow;
+    padding: $p-10 * 15 0;
+    position: relative;
+    .issue__wrapper {
+        .wrapper__content {
+            text-align: center;
+            .content__title {
+                font-size: $h3;
+                font-weight: $bold;
+                line-height: $h-10 * 6;
+                @include respond(tablet) {
+                    font-size: $h4;
+                    line-height: $h-10 * 4;
+                }
+            }
+            .content__text {
+                font-family: "Noto Sans KR", sans-serif;
+                font-weight: $light;
+                padding: 0 $p-10 * 30;
+                @include respond(laptop) {
+                    padding: 0 $p-10 * 20;
+                }
+                @include respond(tablet) {
+                    padding: 0 $p-10;
+                }
+            }
+            .content__button {
+                width: $w-100;
+                margin-bottom: $m-10 * 5;
+                display: flex;
+                justify-content: center;
+                .button {
+                    margin: $m-10 * 5 0;
+                    background: transparent;
+                    &:hover {
+                        background: $dark;
+                    }
+                    @include respond(extraTablet) {
+                        width: $w-100 - 50;
+                    }
+                    @include respond(phone) {
+                        width: $w-100;
+                    }
+                }
+            }
+        }
+        .wrapper__dice {
+            position: absolute;
+            top: 0;
+            right: 5%;
+            img {
+                display: block;
+                width: initial;
+                margin: $m-10 * 3 0;
+            }
+            @include respond(tablet) {
+                display: none;
+            }
+        }
+        .wrapper__list {
+            display: flex;
+            border: 3px solid $border--dark-2;
+            .list__item {
+                width: $w-100 / 5;
+                position: relative;
+                &:hover .item__title {
+                    background: $tomato;
+                }
+                .item__hoticon {
+                    width: $w-10 * 8;
+                    height: $h-10 * 5;
+                    position: absolute;
+                    top: -10%;
+                    left: 0;
+                    @include respond(laptop) {
+                        width: $w-10 * 5;
+                        height: $h-10 * 3;
+                        top: -8%;
+                    }
+                    @include respond(tablet) {
+                        width: $w-10 * 8;
+                        height: $h-10 * 5;
+                        top: 0;
+                    }
+                }
+                .item__title {
+                    text-align: center;
+                    background: $secondary;
+                    color: $tPrimary;
+                    padding: $p-10;
+                    font-size: $h6;
+                    font-weight: $extraBold;
+                    transition: all 0.3s ease;
+                    @include respond(laptop) {
+                        font-size: $body-1;
+                    }
+                }
+                @include respond(tablet) {
+                    width: $w-100;
+                }
+            }
+            .list__item--main {
+                background: $tomato;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                p {
+                    font-size: $h3;
+                    font-weight: $extraBold;
+                    @include respond(laptop) {
+                        font-size: $h4;
+                    }
+                }
+                img {
+                    width: $w-10 * 10;
+                    height: $h-10 * 10;
+                    @include respond(laptop) {
+                        width: $w-10 * 8;
+                        height: $h-10 * 8;
+                    }
+                    @include respond(tablet) {
+                        width: $w-10 * 8;
+                        height: $h-10 * 8;
+                        transform: rotate(90deg);
+                    }
+                }
+                @include respond(laptop) {
+                    padding: $p-10;
+                }
+            }
+            @include respond(tablet) {
+                flex-direction: column;
+            }
+        }
+        .wrapper__image {
+            img {
+                width: auto;
+            }
+            @include respond(tablet) {
+                display: none;
+            }
+        }
+        .wrapper__logo {
+            width: $w-10 * 14;
+            height: $h-10 * 14;
+            position: absolute;
+            bottom: 6%;
+            left: 12%;
+            img {
+                width: $w-100;
+                height: $h-100;
+            }
+            @include respond(laptop) {
+                width: $w-10 * 8;
+                height: $h-10 * 8;
+                bottom: 10%;
+                left: 15%;
+            }
+        }
+        .wrapper__lol {
+            position: absolute;
+            bottom: 10%;
+            right: 15%;
+            @include respond(laptop) {
+                width: $w-10 * 5;
+                height: $h-10 * 5;
+                bottom: 14%;
+                right: 20%;
+            }
+        }
+    }
+    @include respond(tablet) {
+        padding: $p-10 * 10 $p-10;
+    }
+}

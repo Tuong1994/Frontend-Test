@@ -1,0 +1,151 @@
+.best-product {
+    background-image: url("../../assets/img/best-product/bes-bg.png");
+    background-repeat: no-repeat;
+    padding: $p-10 * 15 $p-10 * 17;
+    .best-product__wrapper {
+        .wrapper__content {
+            color: $tTomato;
+            text-align: center;
+            padding: 0 $p-10 * 15;
+            .content__title {
+                font-size: $h2;
+                font-weight: $extraBold;
+                letter-spacing: 5px;
+                line-height: $h-10 * 6;
+                @include respond(extraTablet) {
+                    font-size: $h3;
+                    line-height: $h-10 * 4;
+                }
+            }
+            .content__info {
+                font-size: $h6;
+                font-weight: $regular;
+                line-height: $h-10 * 3.2;
+                margin-bottom: $m-10 * 7;
+                @include respond(smallPhone) {
+                    font-size: $body-1;
+                }
+            }
+            @include respond(laptop) {
+                padding: 0 $p-10 * 5;
+            }
+            @include respond(tablet) {
+                padding: 0 $p-10;
+            }
+        }
+        .wrapper__images {
+            display: flex;
+            .images__item {
+                width: $w-100 / 3;
+                position: relative;
+                .item__producticon {
+                    width: $w-10 * 9.2;
+                    height: $h-10 * 9.2;
+                    position: absolute;
+                    top: -14%;
+                    left: -1%;
+                    @include respond(laptop) {
+                        width: $w-10 * 8;
+                        height: $h-10 * 8;
+                    }
+                    @include respond(tablet) {
+                        width: $w-10 * 10;
+                        height: $h-10 * 10;
+                        top: -8%;
+                    }
+                    @include respond(phone) {
+                        top: -10%;
+                    }
+                    @include respond(extraSmallPhone) {
+                        top: -15%;
+                    }
+                }
+                .item__product {
+                    width: $w-100;
+                }
+                .item__content {
+                    width: $w-100 - 20;
+                    padding: $p-10;
+                    background: $primary;
+                    border: 3px solid $border--dark;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: absolute;
+                    bottom: -13%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    .content__text {
+                        width: $w-10 * 18;
+                        font-size: $body-1;
+                        font-weight: $extraBold;
+                        color: $tDark-2;
+                        margin: 0;
+                        @include respond(extraTablet) {
+                            width: $w-10 * 15;
+                            font-size: $body-3;
+                        }
+                        @include respond(tablet) {
+                            width: $w-10 * 25;
+                            font-size: $body-1;
+                        }
+                        @include respond(phone) {
+                            width: $w-10 * 18;
+                            font-size: initial;
+                        }
+                    }
+                    .content__go-icon {
+                        width: $w-10 * 5;
+                        height: $h-10 * 5;
+                        @include respond(extraTablet) {
+                            width: $w-10 * 4;
+                            height: $h-10 * 4;
+                        }
+                        @include respond(tablet) {
+                            width: $w-10 * 6;
+                            height: $h-10 * 6;
+                        }
+                        @include respond(smallPhone) {
+                            width: $w-10 * 4;
+                            height: $h-10 * 4;
+                        }
+                    }
+                    @include respond(tablet) {
+                        bottom: -5%;
+                    }
+                    @include respond(phone) {
+                        width: $w-100 - 10;
+                        bottom: -7%;
+                    }
+                    @include respond(smallPhone) {
+                        width: $w-100 - 10;
+                        bottom: -10%;
+                    }
+                }
+                @include respond(tablet) {
+                    width: $w-100 - 15;
+                    margin-bottom: $m-10 * 15;
+                }
+                @include respond(smallPhone) {
+                    width: $w-100;
+                    margin-bottom: $m-10 * 15;
+                }
+                @include respond(extraSmallPhone) {
+                    width: $w-100;
+                    margin-bottom: $m-10 * 12;
+                }
+            }
+            @include respond(tablet) {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+    @include respond(laptop) {
+        background-size: cover;
+        padding: $p-10 * 5 $p-10 * 2;
+    }
+    @include respond(tablet) {
+        padding: $p-10 * 5 $p-10;
+    }
+}
